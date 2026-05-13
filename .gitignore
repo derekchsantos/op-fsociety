@@ -1,0 +1,14 @@
+# Ambientes virtuais do Python
+.venv/
+.venv-auditoria/
+venv/
+ENV/
+
+# Logs e arquivos gerados pelo script Sentinela
+*.log
+backups_auditoria/
+auditoria_blockchain.log
+
+# Arquivos temporários e binários compilados do SHC
+*.x
+*.x.c
