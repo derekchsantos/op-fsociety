@@ -1,0 +1,2 @@
+[2026-05-13 12:29:49] [WARNING] Tentativa de Acesso Sensivel - Origem IP: 127.0.0.1 - Rota: /wallet
+[2026-05-13 12:29:49] [CRITICAL] Blockchain Offline - Origem IP: 127.0.0.1 - Rota: /rpc/private
