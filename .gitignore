@@ -12,3 +12,9 @@ auditoria_blockchain.log
 # Arquivos temporários e binários compilados do SHC
 *.x
 *.x.c
+
+#Cron
+cron_auditoria.log
+
+registro_seguro.json
+cron_hids.log
