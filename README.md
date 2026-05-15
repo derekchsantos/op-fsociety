@@ -1,41 +1,57 @@
-# Sentinela: Monitoramento & Auditoria Operacional para Redes Blockchain
+# Sentinela: Monitoramento, Auditoria & Segurança Criptográfica para Blockchain
 
-Este projeto implementa uma solução leve e robusta de **resposta a incidentes e auditoria de infraestrutura** automatizada via Shell Script. Ele foi projetado para atuar em conjunto com um proxy reverso (Nginx) para mitigar ameaças, ataques de negação de serviço (DoS) e monitorar a saúde operacional de nós (nodes) em redes Blockchain de produção.
+Este repositório consolida um ecossistema integrado de **Segurança Defensiva, Criptografia Avançada e Resposta a Incidentes**, projetado especificamente para mitigar ameaças, auditar integridade de dados e proteger a infraestrutura de redes Blockchain de produção.
 
-## Funcionalidades Operacionais
+## Módulos Implementados
 
-- **Monitoramento de Logs em Tempo Real:** Escuta contínua das requisições direcionadas à API RPC e endpoints da Blockchain.
-- **Detecção de Incidentes Críticos:** Identificação imediata de erros de gateway (`502 Bad Gateway` / `504 Gateway Timeout`), sinalizando queda do nó Blockchain.
-- **Auditoria de Segurança:** Alertas visuais e registros instantâneos ao detectar tentativas de varredura ou acessos não autorizados a rotas sensíveis (`/wallet`, `/admin`, `/rpc/private`).
-- **Gerenciamento Inteligente de Armazenamento:** Rotação automática de logs com compactação `.tar.gz` ao atingir limites de espaço (prevenindo preenchimento total do disco).
-- **Proteção do Script:** Arquitetura pronta para compilação e criptografia do código-fonte através do `shc` para execução segura em servidores.
+### 1. Camada de Rede & Proxy Reverso (`Nginx`)
+- **Rate Limiting Ativo:** Configurado para restringir abusos na camada de rede, limitando requisições na porta `1337` a 5 acessos por segundo por IP (mitigação de DoS).
+- **Proteção de Gateway:** Resposta estruturada para erros de comunicação interna (`502`/`504`).
 
-## Tecnologias Utilizadas
+### 2. Monitoramento de Borda (`/scripts/sentinela.sh`)
+- **Análise em Tempo Real:** Captura de eventos contínuos via logs de tráfego, isolando IPs invasores e rotas sensíveis em menos de 1 segundo.
+- **Mitigação Ativa com Firewall:** Bloqueio automatizado de IPs agressores via regras do Linux `UFW`.
+- **Sinalização Sonora e Rotação:** Emissão de alertas físicos via hardware (`beep`) e compactação automática de logs em `.tar.gz` para controle de disco.
 
-- **Shell Script (Bash):** Lógica central de automação e manipulação de fluxos de dados em tempo real.
-- **Nginx:** Proxy reverso e servidor web monitorado.
-- **Git & GitHub:** Versionamento de código e boas práticas de exclusão com `.gitignore`.
-- **Ambiente Isolado:** Homologado utilizando infraestrutura Linux em conjunto com ambientes virtuais Python (`venv`).
+### 3. API Centralizadora SIEM (`/scripts/api_central.py`)
+- **Tunelamento HTTPS/TLS:** Comunicação cifrada ponta a ponta usando certificados SSL/TLS autoassinados (`X.509 RSA 4096-bit`).
+- **Persistência de Logs:** Banco de dados relacional incorporado em `SQLite3` para retenção permanente de auditoria.
+- **Dashboard Web:** Interface gráfica em tempo real renderizada de forma nativa para controle de incidentes.
 
-## Estrutura de Arquivos Recomendada
+### 4. Núcleo Criptográfico & Auditoria (`/scripts/`)
+- **`cripto_transacao.py`:** Autenticidade e não-repúdio de transferências utilizando chaves assimétricas **ECDSA** (Curva Criptográfica `SECP256k1`).
+- **`cripto_rsa.py`:** Privacidade de payloads confidenciais trafegados em redes públicas através de envelopamento **RSA 2048-bit** com preenchimento OAEP/SHA-256.
+- **`hids_criptografado.py`:** Sistema HIDS local que audita binários críticos e salva a base de assinaturas cifrada de forma simétrica com **AES/Fernet**.
+- **`anti_bruteforce.py`:** Algoritmo comportamental de detecção de ataques de força bruta em painéis de gerência.
+
+## Organização do Repositório
 
 ```text
-├── backups_auditoria/       # Diretório gerenciado para armazenar backups compactados
-├── sentinela.sh             # Script original de automação (Criação/Desenvolvimento)
-├── sentinela.sh.x           # Executável criptografado de produção (Gerado via SHC)
-├── .gitignore               # Proteção de vazamento de logs e ambientes isolados
-└── README.md                # Documentação técnica do projeto
+├── scripts/
+│   ├── api_central.py           # SIEM Flask com persistência SQLite e TLS
+│   ├── sentinela.sh             # Core daemon de monitoramento e mitigação UFW
+│   ├── auditoria_blockchain.py   # Monitor de fraudes na cadeia de blocos
+│   ├── hids_criptografado.py    # Detector de intrusão local com hashes AES
+│   ├── cripto_transacao.py      # Assinatura digital de carteiras ECDSA
+│   ├── cripto_rsa.py            # Criptografia assimétrica de payloads
+│   ├── anti_bruteforce.py       # Filtro comportamental de requisições
+│   └── evidencia_operacional.txt# Relatório estático gerado pós-execução bem-sucedida
+├── ARCHITECTURE.md              # Mapeamento do fluxo de rede e topologia
+├── .gitignore                   # Exclusão de credenciais, chaves (.pem, .key) e db
+└── README.md                    # Documentação principal do ecossistema
 ```
 
-## Como Executar o Ambiente
+## Como Executar a Infraestrutura
 
-1. Certifique-se de dar permissão de execução ao script:
+1. Ative o ambiente virtual e execute a API Central (SIEM):
    ```bash
-   chmod +x sentinela.sh
+   python scripts/api_central.py
    ```
-
-2. Inicialize o monitor em background ou em uma sessão dedicada:
+2. Inicialize o monitor de segurança em outra sessão do terminal:
    ```bash
-   ./sentinela.sh
+   ./scripts/sentinela.sh
    ```
-
+3. Realize testes automatizados de estresse utilizando o injetor de tráfego:
+   ```bash
+   python scripts/injetor_testes.py
+   ```
