@@ -102,3 +102,30 @@ Erro de Comunicação: API Central offline. Alerta retido localmente.
 [+] Smart Contract acionado: Carteira_Cliente ──► Carteira_Fornecedor | Valor: 150.0 BTC
 [91m[-] Ataque detectado! Assinatura digital inválida ou falsificada na tentativa de envio de 150.0 BTC para Carteira_Fornecedor.[0m
 Erro de Comunicação: API Central offline. Alerta retido localmente.
+
+[EVIDÊNCIA 9] SMART CONTRACT MULTI-ASSINATURAS (2-of-2):
+python: can't open file '/home/mrrobot/op-fsociety/scripts/smart_contract_multisig.py': [Errno 2] No such file or directory
+
+[EVIDÊNCIA 10] PENTEST DE INJEÇÃO SQL (SQLi AUDIT):
+python: can't open file '/home/mrrobot/op-fsociety/scripts/pentest_sqli.py': [Errno 2] No such file or directory
+
+[EVIDÊNCIA 11] AUDITORIA DE SEGURANÇA GEOGRÁFICA:
+Inicializando Módulo de Auditoria Geográfica e Antimetadados...
+
+[*] Analisando metadados de acesso de [mrrobot] vindo do IP: 127.0.0.1
+[92m Origem Autorizada: IP correspondente ao perímetro seguro do Datacenter.[0m
+
+[*] Analisando metadados de acesso de [hacker_darkarmy] vindo do IP: 203.0.113.50
+[41m[37m[ALERTA GEOGRÁFICO][0m Acesso Suspeito detectado!
+O usuário 'hacker_darkarmy' tentou disparar comandos de infraestrutura fora da Whitelist corporativa.
+Ação Operacional: Notificação emergencial encaminhada e IP isolado de forma preventiva.
+
+[EVIDÊNCIA 12] TESTE DE BLINDAGEM DO BANCO SQLITE (AES/FERNET):
+Iniciando Sistema de Blindagem de Dados em Disco...
+[*] O arquivo já parece estar descriptografado ou em formato texto puro.
+Iniciando Sistema de Blindagem de Dados em Disco...
+Sucesso: Banco de dados SQLite totalmente criptografado em disco.
+
+[EVIDÊNCIA 13] DUMP DE REGISTROS FÍSICOS SALVOS NO BANCO DE DADOS (SQLite3):
+----------------------------------------------------------------------
+----------------------------------------------------------------------
