@@ -23,6 +23,10 @@ Este repositório consolida um ecossistema integrado de **Segurança Defensiva, 
 - **`cripto_rsa.py`:** Privacidade de payloads confidenciais trafegados em redes públicas através de envelopamento **RSA 2048-bit** com preenchimento OAEP/SHA-256.
 - **`hids_criptografado.py`:** Sistema HIDS local que audita binários críticos e salva a base de assinaturas cifrada de forma simétrica com **AES/Fernet**.
 - **`anti_bruteforce.py`:** Algoritmo comportamental de detecção de ataques de força bruta em painéis de gerência.
+- **`smart_contract_multisig.py`:** Mecanismo de governança descentralizada baseada em regras 2-de-2 (M-of-N Multi-signatures) utilizando chaves SECP256k1 para travar a movimentação de fundos corporativos.
+- **`blindar_banco.py`:** Algoritmo de segurança física em disco que cifra a base de dados relacional inteira do SQLite utilizando envelopes AES-128 em períodos de inatividade.
+- **`seguranca_geografica.py`:** Módulo comportamental de Whitelist e análise de telemetria geográfica contra ataques de falsificação de IPs em validadores de rede.
+- **`pentest_sqli.py`:** Ferramenta ofensiva usada para validar a resiliência da infraestrutura contra ataques de injeção de código.
 
 ## Organização do Repositório
 
