@@ -1,0 +1,52 @@
+==================================================
+   RELATÓRIO DE EVIDÊNCIAS - ECOSSISTEMA BLOCKCHAIN
+   Data da Execução: 2026-05-15 00:13:21
+   Operador: mrrobot@fsociety
+==================================================
+
+[EVIDÊNCIA 1] MÓDULO CRIPTOGRÁFICO ECDSA:
+[+] Iniciando Módulo de Assinatura Digital ECDSA (Padrão SECP256k1)...
+[*] Chave Privada (Manter em Segredo): pxp2M426+nWje5Y9/ufv...
+[*] Chave Pública (Endereço da Carteira): 1NPbz3ESsydWOPCv4YGM...
+
+[+] Assinando transação: 'Origem: Carteira_A | Destino: Carteira_B | Valor: 10.5 BTC'
+[🟢] Assinatura Digital Gerada: dmYmy37+xMHVXWKZhxnchS0X8Ty8GY...
+
+[92m[SUCESSO] Transação Válida! Assinatura legítima do proprietário.[0m
+
+[!] Hacker tentando injetar transação adulterada: 'Origem: Carteira_A | Destino: Carteira_B | Valor: 1000.0 BTC'
+
+[91m[ALERTA CRÍTICO] Falha na Assinatura! Transação fraudulenta detectada.[0m
+
+[EVIDÊNCIA 2] MINERAÇÃO PROOF OF WORK (PoW):
+
+[🔨] Iniciando mineração do Bloco #1...
+[92m[✓] Bloco #1 Minerado com Sucesso em 0.08s![0m
+[*] Nonce Encontrado: 46168
+[*] Hash Válido: 000037f1495fed16308cc09ca7ce3adf3ffd419673c4f0a4fe1f1d0a15adc13d
+
+[EVIDÊNCIA 3] ANÁLISE COMPORTAMENTAL ANTI-BRUTEFORCE:
+[+] Simulando tentativas rápidas de força bruta...
+[*] Requisição sensível vinda de 192.168.1.45 para '/rpc/private/login'. Tentativas na janela: 1/5
+[*] Requisição sensível vinda de 192.168.1.45 para '/rpc/private/login'. Tentativas na janela: 2/5
+[*] Requisição sensível vinda de 192.168.1.45 para '/rpc/private/login'. Tentativas na janela: 3/5
+[*] Requisição sensível vinda de 192.168.1.45 para '/rpc/private/login'. Tentativas na janela: 4/5
+[*] Requisição sensível vinda de 192.168.1.45 para '/rpc/private/login'. Tentativas na janela: 5/5
+[91m[BRUTE FORCE DETECTADO] O IP 192.168.1.45 ultrapassou os limites de segurança![0m
+Ação Operacional Recomendada: Bloquear IP 192.168.1.45 via UFW imediatamente.
+[*] Requisição sensível vinda de 192.168.1.45 para '/rpc/private/login'. Tentativas na janela: 6/5
+[91m[BRUTE FORCE DETECTADO] O IP 192.168.1.45 ultrapassou os limites de segurança![0m
+Ação Operacional Recomendada: Bloquear IP 192.168.1.45 via UFW imediatamente.
+
+[EVIDÊNCIA 4] AUDITORIA DE INTEGRIDADE DA CADEIA:
+
+[+] Iniciando Auditoria Criptográfica na Blockchain...
+
+[92m[SUCESSO] Todos os hashes estão íntegros![0m
+
+[!] Adulterando Bloco #0 para forçar o alarme...
+
+[+] Iniciando Auditoria Criptográfica na Blockchain...
+
+[91m[INCIDENTE] Quebra de integridade no Bloco #1![0m
+[⚠️] Erro Operacional: Servidor SMTP local offline. Log registrado.

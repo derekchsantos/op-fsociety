@@ -1,0 +1,16 @@
+==================================================
+   RELATÓRIO DE EVIDÊNCIAS - AUDITORIA BLOCKCHAIN
+   Data: 2026-05-15 00:06:27
+==================================================
+
+--- TESTE 1: ASSINATURA DIGITAL (ECDSA) ---
+python: can't open file '/home/mrrobot/op-fsociety/cripto_transacao.py': [Errno 2] No such file or directory
+
+--- TESTE 2: MINERAÇÃO DE BLOCOS (PoW) ---
+python: can't open file '/home/mrrobot/op-fsociety/minerador.py': [Errno 2] No such file or directory
+
+--- TESTE 3: DETECTOR DE BRUTE FORCE ---
+python: can't open file '/home/mrrobot/op-fsociety/anti_bruteforce.py': [Errno 2] No such file or directory
+
+--- TESTE 4: INTEGRIDADE DA BLOCKCHAIN ---
+python: can't open file '/home/mrrobot/op-fsociety/auditoria_blockchain.py': [Errno 2] No such file or directory
