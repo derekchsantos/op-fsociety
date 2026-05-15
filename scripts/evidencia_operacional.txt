@@ -10,7 +10,7 @@
 [*] Chave Pública (Endereço da Carteira): NpXOZwSeVjF3pW9/JKDf...
 
 [+] Assinando transação: 'Origem: Carteira_A | Destino: Carteira_B | Valor: 10.5 BTC'
-[🟢] Assinatura Digital Gerada: i4fqKwrLTo//mDzES7O/2R3WDEKxkM...
+Assinatura Digital Gerada: i4fqKwrLTo//mDzES7O/2R3WDEKxkM...
 
 [92m[SUCESSO] Transação Válida! Assinatura legítima do proprietário.[0m
 
@@ -20,7 +20,7 @@
 
 [EVIDÊNCIA 2] MINERAÇÃO PROOF OF WORK (PoW):
 
-[🔨] Iniciando mineração do Bloco #1...
+Iniciando mineração do Bloco #1...
 [92m[✓] Bloco #1 Minerado com Sucesso em 0.09s![0m
 [*] Nonce Encontrado: 46168
 [*] Hash Válido: 000037f1495fed16308cc09ca7ce3adf3ffd419673c4f0a4fe1f1d0a15adc13d
@@ -49,7 +49,7 @@ Ação Operacional Recomendada: Bloquear IP 192.168.1.45 via UFW imediatamente.
 [+] Iniciando Auditoria Criptográfica na Blockchain...
 
 [91m[INCIDENTE] Quebra de integridade no Bloco #1![0m
-[⚠️] Erro Operacional: Servidor SMTP local offline. Log registrado.
+Erro Operacional: Servidor SMTP local offline. Log registrado.
 
 [EVIDÊNCIA 5] CRIPTOGRAFIA ASSIMÉTRICA RSA DE PRIVACIDADE:
 [+] Inicializando Infraestrutura de Chaves Assimétricas (RSA 2048-bit)...
@@ -68,7 +68,7 @@ Ação Operacional Recomendada: Bloquear IP 192.168.1.45 via UFW imediatamente.
 [+] Iniciando Auditoria Criptográfica na Blockchain...
 
 [91m[INCIDENTE] Quebra de integridade no Bloco #1![0m
-[⚠️] Erro Operacional: Servidor SMTP local offline. Log registrado.
+Erro Operacional: Servidor SMTP local offline. Log registrado.
 
 [EVIDÊNCIA 7] EXECUÇÃO DE SMART CONTRACTS (ESCROW SIMULATOR):
 Inicializando Engine de Smart Contracts (Python EVM Simulator)...

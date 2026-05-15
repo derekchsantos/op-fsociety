@@ -21,7 +21,7 @@ print(f"\n[+] Assinando transação: '{dados_transacao}'")
 # 3. Assinando digitalmente a transação com a Chave Privada
 assinatura = chave_privada.sign(dados_transacao.encode('utf-8'))
 assinatura_legivel = base64.b64encode(assinatura).decode()
-print(f"[🟢] Assinatura Digital Gerada: {assinatura_legivel[:30]}...")
+print(f"Assinatura Digital Gerada: {assinatura_legivel[:30]}...")
 
 # 4. FUNÇÃO OPERACIONAL DE VALIDAÇÃO (Auditoria de Rede)
 def verificar_autenticidade(dados, assin, ch_pub):

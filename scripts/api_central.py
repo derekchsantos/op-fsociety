@@ -48,7 +48,7 @@ HTML_DASHBOARD = """
         <div class="card {{ inc[3] }}">
             <span class="time"> {{ inc[1] }}</span>
             <span class="tag" style="color:#38bdf8;"> {{ inc[2] }}</span>
-            <span class="tag" style="color:white;">⚠️{{ inc[3] }}</span>
+            <span class="tag" style="color:white;"> {{ inc[3] }}</span>
             <p style="margin-top: 10px; font-size: 15px;">{{ inc[4] }}</p>
         </div>
     {% endfor %}

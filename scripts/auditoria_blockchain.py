@@ -12,15 +12,15 @@ def enviar_email_alerta(bloco_id):
     remetente = "sentinela@fsociety.com"
     destinatario = "admin@blockchain.com"
     msg = MIMEText(f"EMERGÊNCIA: Quebra de integridade detectada no Bloco #{bloco_id}.")
-    msg['Subject'] = f"🚨 ALERT: Fraude na Blockchain - Bloco #{bloco_id}"
+    msg['Subject'] = f"ALERT: Fraude na Blockchain - Bloco #{bloco_id}"
     msg['From'] = remetente
     msg['To'] = destinatario
     try:
         with smtplib.SMTP('localhost', 25) as server:
             server.sendmail(remetente, [destinatario], msg.as_string())
-        print("[📬] E-mail de contingência enviado com sucesso!")
+        print("E-mail de contingência enviado com sucesso!")
     except Exception:
-        print("[⚠️] Erro Operacional: Servidor SMTP local offline. Log registrado.")
+        print("Erro Operacional: Servidor SMTP local offline. Log registrado.")
 
 def auditar_blockchain(chain):
     print("\n[+] Iniciando Auditoria Criptográfica na Blockchain...")
