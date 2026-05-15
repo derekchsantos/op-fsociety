@@ -23,3 +23,10 @@ registro_seguro.enc
 
 #Banco de dados
 *.db
+
+*.pem
+key.pem
+cert.pem
+scripts/cert.pem
+scripts/key.pem
+scripts/db_master.key
