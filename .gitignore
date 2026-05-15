@@ -20,3 +20,6 @@ registro_seguro.json
 cron_hids.log
 hids.key
 registro_seguro.enc
+
+#Banco de dados
+*.db

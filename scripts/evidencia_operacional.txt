@@ -50,3 +50,22 @@ Ação Operacional Recomendada: Bloquear IP 192.168.1.45 via UFW imediatamente.
 
 [91m[INCIDENTE] Quebra de integridade no Bloco #1![0m
 [⚠️] Erro Operacional: Servidor SMTP local offline. Log registrado.
+
+[EVIDÊNCIA 5] CRIPTOGRAFIA ASSIMÉTRICA RSA DE PRIVACIDADE:
+[+] Inicializando Infraestrutura de Chaves Assimétricas (RSA 2048-bit)...
+
+ Payload Criptografado (Bytes Cifrados): b'\x8d\xed\x00\xc2M\x80\xe8W-\x89\xd8=\x14\xe4s\xe5RP\x08\x95WD\x9a\x8eS\xbc\x05\x01\xdf\x84'...
+[92m Sucesso! Payload descriptografado pelo Minerador: Transacao Privada: Whiterose enviou 500_000 E-Coin para Dark Army[0m
+
+[EVIDÊNCIA 6] AUDITORIA DE REGRAS DE SENHAS FORTES:
+
+[+] Iniciando Auditoria Criptográfica na Blockchain...
+
+[92m[SUCESSO] Todos os hashes estão íntegros![0m
+
+[!] Adulterando Bloco #0 para forçar o alarme...
+
+[+] Iniciando Auditoria Criptográfica na Blockchain...
+
+[91m[INCIDENTE] Quebra de integridade no Bloco #1![0m
+[⚠️] Erro Operacional: Servidor SMTP local offline. Log registrado.
