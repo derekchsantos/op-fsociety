@@ -69,3 +69,36 @@ Ação Operacional Recomendada: Bloquear IP 192.168.1.45 via UFW imediatamente.
 
 [91m[INCIDENTE] Quebra de integridade no Bloco #1![0m
 [⚠️] Erro Operacional: Servidor SMTP local offline. Log registrado.
+
+[EVIDÊNCIA 7] EXECUÇÃO DE SMART CONTRACTS (ESCROW SIMULATOR):
+Inicializando Engine de Smart Contracts (Python EVM Simulator)...
+Estado inicial da Ledger carregado com sucesso.
+
+--- CENÁRIO 1: EXECUÇÃO LEGÍTIMA ---
+
+[+] Smart Contract acionado: Carteira_Cliente ──► Carteira_Fornecedor | Valor: 150.0 BTC
+[*] Cláusulas atendidas. Movimentando ativos na Ledger...
+Fundos retidos em custódia segura: Contrato_Custodia = 150.0 BTC
+ Liquidação concluída: Carteira_Fornecedor recebeu os fundos de custódia.
+Estado Final dos Saldos: {'Carteira_Cliente': 350.0, 'Carteira_Fornecedor': 200.0, 'Contrato_Custodia': 0.0}
+
+--- CENÁRIO 2: TENTATIVA DE FRAUDE COMPORTAMENTAL ---
+
+[+] Smart Contract acionado: Carteira_Cliente ──► Carteira_Fornecedor | Valor: 400.0 BTC
+[91m[-] Contrato Revertido: Saldo insuficiente na conta de origem![0m
+
+[EVIDÊNCIA 8] SMART CONTRACTS INTEGRADO VIA HTTPS POST AO SIEM:
+Inicializando Engine de Smart Contracts com Integração SIEM...
+[✓] Estado inicial da Ledger carregado.
+
+--- TESTE 1: TENTATIVA DE QUEBRA DE REGRA DE SALDO ---
+
+[+] Smart Contract acionado: Carteira_Cliente ──► Carteira_Fornecedor | Valor: 9999.0 BTC
+[91m[-] Contrato REVERTIDO: Carteira_Cliente tentou transferir 9999.0 BTC, mas possui apenas 500.0 BTC.[0m
+Erro de Comunicação: API Central offline. Alerta retido localmente.
+
+--- TESTE 2: TENTATIVA DE QUEBRA DE INTEGRIDADE (FRAUDE) ---
+
+[+] Smart Contract acionado: Carteira_Cliente ──► Carteira_Fornecedor | Valor: 150.0 BTC
+[91m[-] Ataque detectado! Assinatura digital inválida ou falsificada na tentativa de envio de 150.0 BTC para Carteira_Fornecedor.[0m
+Erro de Comunicação: API Central offline. Alerta retido localmente.
