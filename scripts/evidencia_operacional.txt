@@ -1,16 +1,16 @@
 ==================================================
    RELATÓRIO DE EVIDÊNCIAS - ECOSSISTEMA BLOCKCHAIN
-   Data da Execução: 2026-05-15 00:13:21
+   Data da Execução: 2026-05-15 00:30:26
    Operador: mrrobot@fsociety
 ==================================================
 
 [EVIDÊNCIA 1] MÓDULO CRIPTOGRÁFICO ECDSA:
 [+] Iniciando Módulo de Assinatura Digital ECDSA (Padrão SECP256k1)...
-[*] Chave Privada (Manter em Segredo): pxp2M426+nWje5Y9/ufv...
-[*] Chave Pública (Endereço da Carteira): 1NPbz3ESsydWOPCv4YGM...
+[*] Chave Privada (Manter em Segredo): QwEJ2EP7+zGFmKUp4KjA...
+[*] Chave Pública (Endereço da Carteira): NpXOZwSeVjF3pW9/JKDf...
 
 [+] Assinando transação: 'Origem: Carteira_A | Destino: Carteira_B | Valor: 10.5 BTC'
-[🟢] Assinatura Digital Gerada: dmYmy37+xMHVXWKZhxnchS0X8Ty8GY...
+[🟢] Assinatura Digital Gerada: i4fqKwrLTo//mDzES7O/2R3WDEKxkM...
 
 [92m[SUCESSO] Transação Válida! Assinatura legítima do proprietário.[0m
 
@@ -21,7 +21,7 @@
 [EVIDÊNCIA 2] MINERAÇÃO PROOF OF WORK (PoW):
 
 [🔨] Iniciando mineração do Bloco #1...
-[92m[✓] Bloco #1 Minerado com Sucesso em 0.08s![0m
+[92m[✓] Bloco #1 Minerado com Sucesso em 0.09s![0m
 [*] Nonce Encontrado: 46168
 [*] Hash Válido: 000037f1495fed16308cc09ca7ce3adf3ffd419673c4f0a4fe1f1d0a15adc13d
 
