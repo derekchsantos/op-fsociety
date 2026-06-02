@@ -1,4 +1,6 @@
 #!/bin/bash
+#Author: Derek Christopher
+
 LOG_FILE="/var/log/nginx/access.log"
 AUDIT_LOG="./auditoria_blockchain.log"
 BACKUP_DIR="./backups_auditoria"
