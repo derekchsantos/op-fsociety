@@ -1,3 +1,6 @@
+# @author Derek Christopher
+# -*- coding: utf-8 -*-
+
 import re
 
 def auditar_senha_validador(senha):
