@@ -1,3 +1,6 @@
+# @author Derek Christopher
+# -*- coding: utf-8 -*-
+
 import time
 
 # Whitelist de IPs e Datacenters autorizados para gerenciar o nó Blockchain
