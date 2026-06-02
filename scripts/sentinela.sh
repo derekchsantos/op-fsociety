@@ -1,5 +1,5 @@
 #!/bin/bash
-#Author: Derek Christopher
+#Author Derek Christopher
 
 LOG_FILE="/var/log/nginx/access.log"
 AUDIT_LOG="./auditoria_blockchain.log"
