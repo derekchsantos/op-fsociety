@@ -1,3 +1,6 @@
+# @author Derek Christopher
+# -*- coding: utf-8 -*-
+
 import collections
 import time
 
