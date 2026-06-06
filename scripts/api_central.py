@@ -1,6 +1,3 @@
-# @author Derek Christopher
-# -*- coding: utf-8 -*-
-
 from flask import Flask, request, jsonify, render_template_string
 import time
 import sqlite3
