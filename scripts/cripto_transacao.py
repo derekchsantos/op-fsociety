@@ -1,6 +1,3 @@
-# @author Derek Christopher
-# -*- coding: utf-8 -*-
-
 import base64
 from ecdsa import SigningKey, SECP256k1, VerifyingKey, BadSignatureError
 
