@@ -2,7 +2,7 @@ import hashlib
 import time
 
 def minerar_bloco(indice, transacoes, hash_anterior, dificuldade):
-    print(f"\n[🔨] Iniciando mineração do Bloco #{indice}...")
+    print(f"\nIniciando mineração do Bloco #{indice}...")
     alvo = "0" * dificuldade
     nonce = 0
     inicio = time.time()
