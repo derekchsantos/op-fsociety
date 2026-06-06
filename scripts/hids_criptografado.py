@@ -1,6 +1,3 @@
-# @author Derek Christopher
-# -*- coding: utf-8 -*-
-
 import os
 import json
 import hashlib
