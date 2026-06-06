@@ -1,5 +1,4 @@
 #!/bin/bash
-#Author Derek Christopher
 
 LOG_FILE="/var/log/nginx/access.log"
 AUDIT_LOG="./auditoria_blockchain.log"
@@ -62,7 +61,7 @@ tail -F "$LOG_FILE" | while read -r line; do
 
     # CENÁRIO 3: Fraude detectada pelo script de auditoria em Python
     if echo "$line" | grep -q "blockchain/fraud"; then
-        echo -e "\e[41m\e[37m[🚨 ALERTA MÁXIMO]\e[0m INTEGRIDADE DA BLOCKCHAIN VIOLADA!"
+        echo -e "\e[41m\e[37m[ALERTA MÁXIMO]\e[0m INTEGRIDADE DA BLOCKCHAIN VIOLADA!"
         echo "[$HORA_ATUAL] [EMERGENCY] Fraude detectada no bloco!" >> "$AUDIT_LOG"
         
         # Sequência de bipes rápidos de emergência do Cenário 3
